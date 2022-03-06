@@ -6,7 +6,7 @@ const nextConfig = {
 module.exports = {
   images: {
     loader: 'imgix',
-    path: 'https://example.com/myaccount/',
+    path: 'https://ucocamp.github.io/frontend/',
   },
   assetPrefix: './'
 }
