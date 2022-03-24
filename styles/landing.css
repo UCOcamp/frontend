@@ -61,3 +61,21 @@
   transform: scale(1.15);
   cursor: pointer;
 }
+
+@media screen and (max-width: 900px) {
+  .hero h1 {
+    font-size: 100px;
+  }
+  .hero h1 img {
+    height: 120px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .hero h1 {
+    font-size: 60px;
+  }
+  .hero h1 img {
+    height: 80px;
+  }
+}
