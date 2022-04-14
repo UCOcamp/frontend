@@ -11,9 +11,5 @@ module.exports = {
     }
     return config
   },
-  images: {
-    loader: 'imgix',
-    path: 'https://example.com/myaccount/',
-  },
   assetPrefix: '/frontend/'
 }
