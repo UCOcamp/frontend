@@ -11,5 +11,5 @@ module.exports = {
     }
     return config
   },
-  assetPrefix: '/frontend/'
+  assetPrefix: 'https://github.com/UCOcamp/frontend/blob/gh-pages'
 }
