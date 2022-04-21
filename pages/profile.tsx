@@ -2,6 +2,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
+import { Navbar } from '../components/navbar'
 
 const Home: NextPage = () => {
   return (
@@ -11,6 +12,7 @@ const Home: NextPage = () => {
         <meta name="description" content="UCOCamp landing page" />
         <link rel="icon" href="/logo.png" />
       </Head>
+      <Navbar />
       <main>
         <h1>Perfil</h1>
       <button className='loginButton'><Link href="/homepage">&nbsp;&nbsp;&nbsp;Mis cursos&nbsp;&nbsp;&nbsp;</Link></button>
