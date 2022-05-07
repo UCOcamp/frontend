@@ -7,8 +7,8 @@ const Home: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>UCOCamp</title>
-        <meta name="description" content="UCOCamp landing page" />
+        <title>UCOCAMP</title>
+        <meta name="description" content="UCOCAMP landing page" />
         <link rel="icon" href="/logo.png" />
       </Head>
       <main>
