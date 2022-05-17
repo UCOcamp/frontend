@@ -3,6 +3,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
 
+
 const Home: NextPage = () => {
   return (
     <div>
@@ -19,7 +20,11 @@ const Home: NextPage = () => {
           </a>
           <h2>Complementa tu formación con cursos 100% online</h2>
 		      <br></br>
-		      <button className='loginButton'><Link href="/homepage">&nbsp;&nbsp;&nbsp;¡Empieza ahora!&nbsp;&nbsp;&nbsp;</Link></button>
+          <div>
+            <button className='loginButton'><Link href="/registerPage">&nbsp;&nbsp;&nbsp;Regístrate&nbsp;&nbsp;&nbsp;</Link></button>
+            <a>&nbsp;&nbsp;</a>
+  		      <button className='loginButton'><Link href="/loginPage">&nbsp;&nbsp;&nbsp;Inicia Sesión&nbsp;&nbsp;&nbsp;</Link></button>
+          </div>
         </div>
       </main>
     </div>
