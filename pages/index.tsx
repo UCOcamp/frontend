@@ -16,11 +16,11 @@ const Home: NextPage = () => {
         <div className="heroBackground"></div>
         <div className="hero">
           <a>
-            <h1><img src="/logo.png" alt="Logo" />COCAMP</h1>
+            <h1><img src="/logoLargo.png" alt="Logo"/></h1>
           </a>
           <h2>Complementa tu formación con cursos 100% online</h2>
 		      <br></br>
-          <div>
+          <div style={{color:"#ffff"}}>
             <button className='loginButton'><Link href="/registerPage">&nbsp;&nbsp;&nbsp;Regístrate&nbsp;&nbsp;&nbsp;</Link></button>
             <a>&nbsp;&nbsp;</a>
   		      <button className='loginButton'><Link href="/loginPage">&nbsp;&nbsp;&nbsp;Inicia Sesión&nbsp;&nbsp;&nbsp;</Link></button>

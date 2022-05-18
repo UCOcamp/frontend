@@ -1,3 +1,5 @@
+import '../styles/bootstrap.min.css'
+import '../styles/style.css'
 import '../styles/globals.css'
 import '../styles/landing.css'
 import '../styles/button.css'

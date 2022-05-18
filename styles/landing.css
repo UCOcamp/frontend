@@ -48,7 +48,7 @@
 }
 
 .hero h1 img {
-  height: 200px;
+  height: 300px;
 }
 
 .hero .dropDown {
@@ -68,7 +68,7 @@
     font-size: 100px;
   }
   .hero h1 img {
-    height: 120px;
+    height: 275px;
   }
 }
 
@@ -77,7 +77,7 @@
     font-size: 60px;
   }
   .hero h1 img {
-    height: 80px;
+    height: 150px;
   }
 }
 
