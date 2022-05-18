@@ -16,7 +16,7 @@ const Home: NextPage = () => {
       <Navbar />
       <main>
         <br></br>
-        <h1>Homepage</h1>
+        <h1>Cursos</h1>
         <br></br>
         <section id="Speakers" className="Section Speakers">
           <div className="grid">
