@@ -3,6 +3,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
 import { Navbar } from '../components/navbar/navbar'
+import { CourseBlock } from "../components/courseBlock/courseBlock";
 
 const Home: NextPage = () => {
   return (
@@ -18,6 +19,12 @@ const Home: NextPage = () => {
         <button className='loginButton'><Link href="/">&nbsp;&nbsp;&nbsp;Salir&nbsp;&nbsp;&nbsp;</Link></button>
         <button className='loginButton'><Link href="/course">&nbsp;&nbsp;&nbsp;Curso&nbsp;&nbsp;&nbsp;</Link></button>
         <button className='loginButton'><Link href="/profile">&nbsp;&nbsp;&nbsp;Perfil&nbsp;&nbsp;&nbsp;</Link></button>
+        <CourseBlock />
+        <CourseBlock />
+        <CourseBlock />
+        <CourseBlock />
+        <CourseBlock />
+        <CourseBlock />
       </main>
     </div>
   )
