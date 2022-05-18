@@ -21,9 +21,9 @@ const Home: NextPage = () => {
           <h2>Complementa tu formación con cursos 100% online</h2>
 		      <br></br>
           <div style={{color:"#ffff"}}>
-            <button className='loginButton'><Link href="/registerPage">&nbsp;&nbsp;&nbsp;Regístrate&nbsp;&nbsp;&nbsp;</Link></button>
+            <button className='loginButton'><Link href="/registerPage">&nbsp;&nbsp;&nbsp;Register&nbsp;&nbsp;&nbsp;</Link></button>
             <a>&nbsp;&nbsp;</a>
-  		      <button className='loginButton'><Link href="/loginPage">&nbsp;&nbsp;&nbsp;Inicia Sesión&nbsp;&nbsp;&nbsp;</Link></button>
+  		      <button className='loginButton'><Link href="/loginPage">&nbsp;&nbsp;&nbsp;Login&nbsp;&nbsp;&nbsp;</Link></button>
           </div>
         </div>
       </main>
