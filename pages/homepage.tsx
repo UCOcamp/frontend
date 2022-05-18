@@ -1,11 +1,43 @@
 /* eslint-disable @next/next/no-img-element */
 import type { NextPage } from "next";
 import Head from "next/head";
-import Link from "next/link";
 import { Navbar } from "../components/navbar/navbar";
 import { Footer } from "../components/footer/footer";
+import { useEffect, useState } from "react";
+import axios from "axios";
+
+
+type CourseJSON = {
+  title: string,
+  description: string,
+  thumbnailUrl: string,
+  id: string,
+}
 
 const Home: NextPage = () => {
+  const [courses, setCourses] = useState<CourseJSON[]>([])
+  useEffect(() => {
+    const getCourses = async () => {
+      try {
+        const coursesURL = 'https://ucocamp-courses.aulasoftwarelibre.uco.es';
+        const { data } = await axios.get(`${coursesURL}/courses`)
+        const coursesJSON: CourseJSON[] = new Array<CourseJSON>();
+        data.map((course: CourseJSON) => {
+          const courseJSON: CourseJSON = {
+            title: course.title,
+            description: course.description,
+            thumbnailUrl: `${coursesURL}/${course.thumbnailUrl}`,
+            id: course.id
+          }
+          coursesJSON.push(courseJSON)
+        })
+        setCourses(coursesJSON);
+      } catch (e) {
+        console.error(e)
+      }      
+    }
+    getCourses();
+  }, [courses, setCourses])
   return (
     <div>
       <Head>
@@ -20,180 +52,19 @@ const Home: NextPage = () => {
         <br></br>
         <section id="Speakers" className="Section Speakers">
           <div className="grid">
-            <div className="speakerCard">
-              <div className="Photo">
-                <img src="portada.jpg" alt="Foto de Eduardo Sánchez" />
-              </div>
-              <div className="Label">
-                <h3>Curso</h3>
-                <p>Descripción del curso</p>
-                <div className="RRSS">
-                  <ul>
-                    <li>
-                      <a
-                        href="https://twitter.com/eduSatoe"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="fa fa-twitter"
-                      ></a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://www.linkedin.com/in/eduardosancheztoril/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="fa fa-linkedin"
-                      ></a>
-                    </li>
-                  </ul>
+          {courses.map((course) => {
+            return (
+              <div className="speakerCard" key={course.id}>
+                <div className="Photo">
+                  <img src={course.thumbnailUrl} alt="Foto de Eduardo Sánchez" />
+                </div>
+                <div className="Label">
+                  <h3>{course.title}</h3>
+                  <p>{course.description}</p>
                 </div>
               </div>
-            </div>
-            <div className="speakerCard">
-              <div className="Photo">
-                <img src="portada.jpg" alt="Foto de Paula García" />
-              </div>
-              <div className="Label">
-                <h3>Curso</h3>
-                <p>Descripción del curso</p>
-                <div className="RRSS">
-                  <ul>
-                    <li>
-                      <a
-                        href="https://twitter.com/paula_g_phys"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="fa fa-twitter"
-                      ></a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://www.linkedin.com/in/paula-garc%C3%ADa-molina-538b86199/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="fa fa-linkedin"
-                      ></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div className="speakerCard">
-              <div className="Photo">
-                <img src="portada.jpg" alt="Foto de Ines Huertas" />
-              </div>
-              <div className="Label">
-                <h3>Curso</h3>
-                <p>Descripción del curso</p>
-                <div className="RRSS">
-                  <ul>
-                    <li>
-                      <a
-                        href="https://twitter.com/quierodata"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="fa fa-twitter"
-                      ></a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://www.linkedin.com/in/ineshuertas/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="fa fa-linkedin"
-                      ></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div className="speakerCard">
-              <div className="Photo">
-                <img src="portada.jpg" alt="Foto de David Bonilla" />
-              </div>
-              <div className="Label">
-                <h3>Curso</h3>
-                <p>Descripción del curso</p>
-                <div className="RRSS">
-                  <ul>
-                    <li>
-                      <a
-                        href="https://twitter.com/david_bonilla"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="fa fa-twitter"
-                      ></a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://www.linkedin.com/in/dbonillaf/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="fa fa-linkedin"
-                      ></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div className="speakerCard">
-              <div className="Photo">
-                <img src="portada.jpg" alt="Foto de Carmen Ansio" />
-              </div>
-              <div className="Label">
-                <h3>Curso</h3>
-                <p>Descripción del curso</p>
-                <div className="RRSS">
-                  <ul>
-                    <li>
-                      <a
-                        href="https://twitter.com/carmenansio"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="fa fa-twitter"
-                      ></a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://www.linkedin.com/in/carmenansio/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="fa fa-linkedin"
-                      ></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div className="speakerCard">
-              <div className="Photo">
-                <img src="portada.jpg" alt="Foto de Carlos Buenosvinos" />
-              </div>
-              <div className="Label">
-                <h3>Curso</h3>
-                <p>Descripción del curso</p>
-                <div className="RRSS">
-                  <ul>
-                    <li>
-                      <a
-                        href="https://twitter.com/buenosvinos"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="fa fa-twitter"
-                      ></a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://www.linkedin.com/in/carlosbuenosvinos/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="fa fa-linkedin"
-                      ></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+            )
+          })}
           </div>
         </section>
       </main>
