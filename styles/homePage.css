@@ -1,0 +1,50 @@
+.Section {
+  width: 100vw;
+  max-width: 100%;
+  max-width: 100%;
+  min-height: 200px;
+
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+}
+
+.Speakers {
+  display: flex;
+  flex-direction: column;
+}
+
+.Speakers .grid {
+  display: grid;
+  margin: auto;
+  margin-top: 30px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2.5em;
+
+  justify-content: center;
+  align-content: center;
+
+  grid-auto-flow: row;
+}
+
+.Speakers .speakerCard {
+  position: relative;
+  --height: 550px;
+  --width: 412.5px;
+  --label-padding: 1em;
+
+  height: var(--height);
+  width: var(--width);
+  border-radius: 10px;
+  background-size: cover;
+  display: block;
+
+
+  box-shadow: -1px 6px 16px 1px rgba(0, 0, 0, 0.68);
+  -webkit-box-shadow: -1px 6px 16px 1px rgba(0, 0, 0, 0.68);
+  -moz-box-shadow: -1px 6px 16px 1px rgba(0, 0, 0, 0.68);
+}
+
+.prueba{
+  margin: auto;
+}

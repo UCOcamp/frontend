@@ -3,8 +3,9 @@ import '../styles/style.css'
 import '../styles/globals.css'
 import '../styles/landing.css'
 import '../styles/button.css'
-import '../styles/courseBlock.css'
 import '../styles/navbar.css'
+import '../styles/courseBlock.css'
+import '../styles/homePage.css'
 
 import type { AppProps } from 'next/app'
 
