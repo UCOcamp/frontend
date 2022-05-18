@@ -6,6 +6,7 @@ import '../styles/button.css'
 import '../styles/navbar.css'
 import '../styles/courseBlock.css'
 import '../styles/homePage.css'
+import '../styles/footer.css'
 
 import type { AppProps } from 'next/app'
 

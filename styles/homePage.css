@@ -7,6 +7,7 @@
   background-position: center;
   background-size: cover;
   text-align: center;
+  vertical-align: right;
 }
 
 .Speakers {
@@ -29,7 +30,7 @@
 
 .Speakers .speakerCard {
   position: relative;
-  --height: 550px;
+  --height: 400px;
   --width: 412.5px;
   --label-padding: 1em;
 
@@ -39,12 +40,70 @@
   background-size: cover;
   display: block;
 
-
   box-shadow: -1px 6px 16px 1px rgba(0, 0, 0, 0.68);
   -webkit-box-shadow: -1px 6px 16px 1px rgba(0, 0, 0, 0.68);
   -moz-box-shadow: -1px 6px 16px 1px rgba(0, 0, 0, 0.68);
 }
 
-.prueba{
-  margin: auto;
+.Speakers .speakerCard:hover{
+  transform: scale(1.15);
+}
+
+.speakerCard .Photo {
+  width: var(--width);
+  height: calc(var(--height) / 1.5);
+  position: inherit;
+  z-index: 1;
+  border-radius: 10px;
+}
+.speakerCard img {
+  width: var(--width);
+  transition: all ease-out 100ms;
+  border-radius: 10px;
+}
+
+.speakerCard img:hover {
+  filter: brightness(1.05);
+}
+
+.speakerCard .Label {
+  padding: var(--label-padding);
+  color: black;
+  font-size: 20px;
+}
+
+.speakerCard .RRSS {
+  position: absolute;
+  bottom: 5px;
+  width: calc(100% - calc(var(--label-padding) * 2));
+}
+
+.speakerCard .RRSS ul {
+  list-style: none;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.speakerCard .RRSS li {
+  display: inline-block;
+}
+@media screen and (max-width: 1400px) {
+  .Speakers .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 900px) {
+  .Speakers .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .Speakers .speakerCard {
+    --height: 400px;
+    --width: 300px;
+  }
+
+  .speakerCard .Label {
+    font-size: 12px;
+  }
 }
