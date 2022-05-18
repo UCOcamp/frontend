@@ -1,15 +1,9 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
-import { Navbar } from "../components/navbar/navbar";
-import { Footer } from "../components/footer/footer";
+import { Navbar } from "../../../../components/navbar/navbar";
+import { Footer } from "../../../../components/footer/footer";
 import ReactPlayer from "react-player";
-
-/**
- * Te dejo esta pagina duplicada, realmente deberia de ir en /courses/[course]/lessons/[id].tsx
- * Pero por alguna razón en esa ruta no me pilla el css "XD"
- * Supongo que mañana podre arreglarlo, si no lo ponemos en plan warro
- */
 
 const Home: NextPage = () => {
   return (

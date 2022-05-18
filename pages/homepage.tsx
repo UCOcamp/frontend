@@ -5,6 +5,7 @@ import { Navbar } from "../components/navbar/navbar";
 import { Footer } from "../components/footer/footer";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Link from "next/link";
 
 
 type CourseJSON = {
@@ -54,15 +55,17 @@ const Home: NextPage = () => {
           <div className="grid">
           {courses.map((course) => {
             return (
-              <div className="speakerCard" key={course.id}>
-                <div className="Photo">
-                  <img src={course.thumbnailUrl} alt="Foto de Eduardo Sánchez" />
+              <Link key={course.id} href={`/courses/${course.id}/lessons`} passHref>
+                <div className="speakerCard" >
+                  <div className="Photo">
+                    <img src={course.thumbnailUrl} alt="Foto de Eduardo Sánchez" />
+                  </div>
+                  <div className="Label">
+                    <h3>{course.title}</h3>
+                    <p>{course.description}</p>
+                  </div>
                 </div>
-                <div className="Label">
-                  <h3>{course.title}</h3>
-                  <p>{course.description}</p>
-                </div>
-              </div>
+              </Link>
             )
           })}
           </div>
