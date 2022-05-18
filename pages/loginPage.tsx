@@ -22,7 +22,9 @@ const Home: NextPage = () => {
   };
   
 
-
+  const preventDefault = (e: React.FormEvent<HTMLElement>) => {
+    e.preventDefault();
+  }
   const Login = async () => {
     if (!email || !passwd) {
       setErrorMsg('Required params are missing!')
@@ -32,8 +34,8 @@ const Home: NextPage = () => {
     setErrorMsg('')
 
     const body = {
-      mail: 'eee@e.com',
-      passwd: 'aa'
+      mail: email,
+      passwd: passwd
     }
     try {
       const response = await axios.post(`https://ucocamp-users.aulasoftwarelibre.uco.es/users/login`, body)
@@ -71,7 +73,7 @@ const Home: NextPage = () => {
                         </h3>
                         <p style={{color: "red"}}>{errorMsg}</p>
                         </div>
-                        <form>
+                        <form onSubmit={preventDefault}>
                         <div className="form-group first">
                             <label htmlFor="email">Email:</label>
                             <br></br>
@@ -96,7 +98,7 @@ const Home: NextPage = () => {
                           </div>
                           <br></br>
                           <button className="btn btn-pill text-white btn-block btn-primary loginButton" onClick={Login}>
-                            Register
+                            Login
                           </button>
                         </form>
                       </div>

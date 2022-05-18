@@ -35,6 +35,9 @@ const RegisterPage: NextPage = () => {
     setConfirmPasswd(e.currentTarget.value);
   };
 
+  const preventDefault = (e: React.FormEvent<HTMLElement>) => {
+    e.preventDefault();
+  }
   const Register = async () => {
     if (!name || !surname || !email || !passwd || !confirmPasswd) {
       setErrorMsg('Required params are missing!')
@@ -89,7 +92,7 @@ const RegisterPage: NextPage = () => {
                         </h3>
                         <p style={{color: "red"}}>{errorMsg}</p>
                         </div>
-                        <form>
+                        <form onSubmit={preventDefault}>
                           <div className="form-group first">
                             <label htmlFor="fname">Name:</label>
                             <br></br>
@@ -98,6 +101,7 @@ const RegisterPage: NextPage = () => {
                               className="form-control"
                               id="fname"
                               required={true}
+                              value={name}
                               onChange={onNameChange}
                             />
                           </div>
@@ -109,6 +113,7 @@ const RegisterPage: NextPage = () => {
                               className="form-control"
                               id="lname"
                               required={true}
+                              value={surname}
                               onChange={onSurnameChange}
 
                             />
@@ -121,6 +126,7 @@ const RegisterPage: NextPage = () => {
                               className="form-control"
                               id="email"
                               required={true}
+                              value={email}
                               onChange={onEmailChange}
                             />
                           </div>
@@ -132,6 +138,7 @@ const RegisterPage: NextPage = () => {
                               className="form-control"
                               id="password"
                               required={true}
+                              value={passwd}
                               onChange={onPasswdChange}
                             />
                           </div>
@@ -143,6 +150,7 @@ const RegisterPage: NextPage = () => {
                               className="form-control"
                               id="password-confirmation"
                               required={true}
+                              value={confirmPasswd}
                               onChange={onConfirmPasswdChange}
                             />
                           </div>
