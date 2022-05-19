@@ -22,7 +22,7 @@ const Home: NextPage = () => {
         <div className="hero">
           <h1>Definiciones y conceptos básicos</h1>
           <br></br>
-          <ReactPlayer url='https://ucocamp-courses.aulasoftwarelibre.uco.es/files/courses/tdd:testdrivendevelopment/4c2c1e73-5491-4398-b1dd-30253b311f75/lecci%C3%B3n1/lecci%C3%B3n1.mp4' controls={true} />
+          <ReactPlayer url='https://www.youtube.com/watch?v=Nc_ZAAkvx8w&list=PLRFOqDrY-6nuY8ceutcEN_TbpCQUUDJsv' controls={true} />
           <br></br>
           <button className='loginButton'><Link href="//courses-707f4c1e-389f-4909-8922-70dfc550081b-lessons-69ad1b6b-82e2-408a-b6bc-fd896485e8d9-lesson-2">&nbsp;&nbsp;&nbsp;Siguiente lección&nbsp;&nbsp;&nbsp;</Link></button>
         </div>
