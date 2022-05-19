@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import type { NextPage } from "next";
 import Head from "next/head";
 import { Navbar } from "../../../../components/navbar/navbar";
@@ -67,9 +68,6 @@ const Home: NextPage = () => {
           <div className="grid">
             {contentBlocks.map((cb) => {
               return cb.lessons.map((lsn) => {
-                const baseUrl =
-                  "https://ucocamp-courses.aulasoftwarelibre.uco.es";
-                console.log(lsn.thumbnailUrl); // La URL esta bien, no se por que no la muestra en la Image
                 return (
                   <Link key={lsn.video.url} href={`/video`} passHref>
                     <div className="speakerCard">
