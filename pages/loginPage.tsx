@@ -73,7 +73,7 @@ const Home: NextPage = () => {
                           Log in to <strong>UCOCAMP</strong>
                           </h3>
                         </h3>
-                        <p stye={{color: "red"}}>{errorMsg}</p>
+                        <p style={{color: "red"}}>{errorMsg}</p>
                         </div>
                         <form onSubmit={preventDefault}>
                         <div className="form-group first">
