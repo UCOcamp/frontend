@@ -2,7 +2,7 @@
     width: 100%;
     position: relative;
     height: auto;
-    background-color: #ac0937;
+    background-color: #8E072D;
   }
   .footer .col {
     width: 190px;
@@ -34,7 +34,6 @@
     color: white;
     font-size: 14px;
     font-family: inherit;
-    font-weight: bold;
     padding: 5px 0px 5px 0px;
     cursor: pointer;
     transition: .2s;

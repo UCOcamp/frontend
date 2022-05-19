@@ -49,9 +49,9 @@ const Home: NextPage = () => {
       <Navbar />
       <main>
         <br></br>
-        <h1>Cursos</h1>
+        <h1>&nbsp; Cursos</h1>
         <br></br>
-        <section id="Speakers" className="Section Speakers">
+        <section id="Speakers" className="Section Speakers centered">
           <div className="grid">
           {courses.map((course) => {
             return (

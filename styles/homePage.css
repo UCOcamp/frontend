@@ -107,3 +107,9 @@
     font-size: 12px;
   }
 }
+
+.centered {
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}

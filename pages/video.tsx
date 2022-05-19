@@ -4,14 +4,12 @@ import Link from "next/link";
 import { Navbar } from "../components/navbar/navbar";
 import { Footer } from "../components/footer/footer";
 import ReactPlayer from "react-player";
+import { useRouter } from "next/router";
 
-/**
- * Te dejo esta pagina duplicada, realmente deberia de ir en /courses/[course]/lessons/[id].tsx
- * Pero por alguna razón en esa ruta no me pilla el css "XD"
- * Supongo que mañana podre arreglarlo, si no lo ponemos en plan warro
- */
 
 const Home: NextPage = () => {
+  const router = useRouter();
+  const { course } = router.query;
   return (
     <div>
       <Head>
@@ -22,7 +20,7 @@ const Home: NextPage = () => {
       <Navbar />
       <main>
         <br></br>
-        <h1>Cursos {'>'} Lecciones {'>'} Lección 1</h1>
+        <h1>{course}</h1>
         <br></br>
         <ReactPlayer url='https://ucocamp-courses.aulasoftwarelibre.uco.es/files/courses/tdd:testdrivendevelopment/4c2c1e73-5491-4398-b1dd-30253b311f75/lecci%C3%B3n1/lecci%C3%B3n1.mp4' controls={true} />
       </main>

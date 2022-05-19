@@ -5,10 +5,9 @@ export const Footer = () => {
 <div className="footer">
   <div className="contain">
   <div className="col social">
-    <li className="logo" style={{color:"White"}}><a href="#">UCOCAMP</a></li>
-  </div>
-  <div className="col social">
-    <a>&nbsp;</a>
+    <ul>
+      <li className="logo" style={{color:"White"}}><a href="#">&nbsp;UCOCAMP</a></li>
+    </ul>
   </div>
   <div className="col">
     <h1>Acerca de</h1>
@@ -25,10 +24,10 @@ export const Footer = () => {
     </ul>
   </div>
   <div className="col">
-    <h1>Legal</h1>
+    <h1>&nbsp;Legal</h1>
     <ul>
-      <li>Terminos de uso</li>
-      <li>Seguridad</li>
+      <li>&nbsp;&nbsp;Terminos de uso</li>
+      <li>&nbsp;&nbsp;Seguridad</li>
     </ul>
   </div>
   <div className="col">
@@ -36,6 +35,13 @@ export const Footer = () => {
     <ul>
       <li>Mi cuenta</li>
       <li>Colecciones</li>
+    </ul>
+  </div>
+  <div className="col">
+    <h1>Otros</h1>
+    <ul>
+      <li>Recursos</li>
+      <li>Creadores</li>
     </ul>
   </div>
 <div className="clearfix"></div>
