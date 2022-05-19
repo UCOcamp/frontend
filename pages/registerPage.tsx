@@ -88,7 +88,9 @@ const RegisterPage: NextPage = () => {
                       <div className="form-block">
                         <div className="mb-4">
                         <h3>
+                        <h3>
                           Sign Up to <strong>UCOCAMP</strong>
+                        </h3>
                         </h3>
                         <p style={{color: "red"}}>{errorMsg}</p>
                         </div>

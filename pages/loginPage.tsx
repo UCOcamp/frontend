@@ -69,9 +69,11 @@ const Home: NextPage = () => {
                       <div className="form-block">
                         <div className="mb-4">
                         <h3>
+                          <h3>
                           Log in to <strong>UCOCAMP</strong>
+                          </h3>
                         </h3>
-                        <p style={{color: "red"}}>{errorMsg}</p>
+                        <p stye={{color: "red"}}>{errorMsg}</p>
                         </div>
                         <form onSubmit={preventDefault}>
                         <div className="form-group first">
