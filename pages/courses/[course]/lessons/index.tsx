@@ -69,7 +69,7 @@ const Home: NextPage = () => {
             {contentBlocks.map((cb) => {
               return cb.lessons.map((lsn) => {
                 return (
-                  <Link key={lsn.video.url} href={`/video`} passHref>
+                  <Link key={lsn.video.url} href={`/courses-707f4c1e-389f-4909-8922-70dfc550081b-lessons-69ad1b6b-82e2-408a-b6bc-fd896485e8d9-lesson-1`} passHref>
                     <div className="speakerCard">
                       <div className="Photo">
                         <img
