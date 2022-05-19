@@ -39,7 +39,7 @@ const Home: NextPage = () => {
         let cbsJSON: ContentBlockJSON[] = data;
         cbsJSON = cbsJSON.map((cb) => {
           cb.lessons = cb.lessons.map((lsn) => {
-            lsn.thumbnailUrl = coursesURL + "/" + lsn.thumbnailUrl;
+            lsn.thumbnailUrl = lsn.thumbnailUrl;
             lsn.video.url = lsn.title + "," + coursesURL + "/" + lsn.video.url;
             return lsn;
           });

@@ -27,7 +27,7 @@ const Home: NextPage = () => {
           const courseJSON: CourseJSON = {
             title: course.title,
             description: course.description,
-            thumbnailUrl: `${coursesURL}/${course.thumbnailUrl}`,
+            thumbnailUrl: course.thumbnailUrl,
             id: course.id
           }
           coursesJSON.push(courseJSON)
