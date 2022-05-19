@@ -1,8 +1,8 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
-import { Navbar } from "../../../../components/navbar/navbar";
-import { Footer } from "../../../../components/footer/footer";
+import { Navbar } from "../../../../../../components/navbar/navbar";
+import { Footer } from "../../../../../../components/footer/footer";
 import ReactPlayer from "react-player";
 
 const Home: NextPage = () => {
